@@ -1,0 +1,1868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MI AMOR | DJ Cheezy Jnr × Royalty SA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:Poppins,sans-serif;
+
+background:
+linear-gradient(
+135deg,
+#120014,
+#22002d,
+#3b0b55,
+#5f167d,
+#9d2db5
+);
+
+background-size:400% 400%;
+
+animation:bgMove 15s ease infinite;
+
+overflow-x:hidden;
+
+color:white;
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+}
+
+@keyframes bgMove{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+/* mouse glow */
+
+.cursor{
+
+position:fixed;
+
+width:300px;
+
+height:300px;
+
+border-radius:50%;
+
+pointer-events:none;
+
+background:
+
+radial-gradient(circle,
+rgba(255,105,180,.28),
+transparent 70%);
+
+transform:translate(-50%,-50%);
+
+z-index:0;
+
+}
+
+/* floating hearts */
+
+.hearts{
+
+position:fixed;
+
+left:0;
+top:0;
+
+width:100%;
+height:100%;
+
+overflow:hidden;
+
+pointer-events:none;
+
+}
+
+.hearts span{
+
+position:absolute;
+
+bottom:-60px;
+
+font-size:25px;
+
+color:#ff70b8;
+
+animation:heartFloat linear infinite;
+
+opacity:.5;
+
+}
+
+.hearts span:nth-child(1){
+left:10%;
+animation-duration:12s;
+font-size:18px;
+}
+
+.hearts span:nth-child(2){
+left:25%;
+animation-duration:16s;
+font-size:32px;
+}
+
+.hearts span:nth-child(3){
+left:45%;
+animation-duration:11s;
+}
+
+.hearts span:nth-child(4){
+left:65%;
+animation-duration:18s;
+font-size:40px;
+}
+
+.hearts span:nth-child(5){
+left:80%;
+animation-duration:13s;
+}
+
+.hearts span:nth-child(6){
+left:92%;
+animation-duration:20s;
+font-size:28px;
+}
+
+@keyframes heartFloat{
+
+0%{
+
+transform:
+translateY(0)
+rotate(0deg)
+scale(.4);
+
+opacity:0;
+
+}
+
+20%{
+opacity:.8;
+}
+
+100%{
+
+transform:
+translateY(-120vh)
+rotate(360deg)
+scale(1.3);
+
+opacity:0;
+
+}
+
+}
+
+/* hero */
+
+.hero{
+
+width:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:40px;
+
+z-index:2;
+
+}
+
+/* glass card */
+
+.card{
+
+width:95%;
+max-width:620px;
+
+padding:45px;
+
+border-radius:35px;
+
+background:
+rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+
+0 0 60px rgba(255,80,180,.25);
+
+text-align:center;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* glow border */
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+inset:-2px;
+
+border-radius:35px;
+
+padding:2px;
+
+background:
+
+linear-gradient(
+45deg,
+#ff5db1,
+#ffffff,
+#b14cff,
+#ff5db1);
+
+-webkit-mask:
+linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+
+-webkit-mask-composite:xor;
+
+pointer-events:none;
+
+}
+
+/* artist */
+
+.artist{
+
+font-size:14px;
+
+letter-spacing:3px;
+
+color:#ffcde8;
+
+text-transform:uppercase;
+
+margin-bottom:10px;
+
+}
+
+/* title */
+
+.title{
+
+font-family:"Great Vibes",cursive;
+
+font-size:85px;
+
+line-height:1;
+
+color:white;
+
+text-shadow:
+
+0 0 25px #ff63b7,
+0 0 50px #ff63b7;
+
+animation:pulse 3s infinite;
+
+}
+
+@keyframes pulse{
+
+50%{
+
+transform:scale(1.03);
+
+text-shadow:
+
+0 0 50px #ff63b7,
+0 0 80px #ff63b7;
+
+}
+
+}
+
+/* quote */
+
+.quote{
+
+margin-top:18px;
+
+font-style:italic;
+
+font-size:18px;
+
+color:#ffd6ef;
+
+opacity:.9;
+
+}
+
+/* genre */
+
+.genre{
+
+margin-top:10px;
+
+opacity:.7;
+
+letter-spacing:2px;
+
+font-size:14px;
+
+}
+
+/* album */
+
+.cover{
+
+width:270px;
+
+margin:35px auto;
+
+display:block;
+
+border-radius:28px;
+
+box-shadow:
+
+0 0 50px rgba(255,100,190,.5);
+
+animation:floatAlbum 5s ease-in-out infinite;
+
+transition:.5s;
+
+cursor:pointer;
+
+}
+
+.cover:hover{
+
+transform:scale(1.05);
+
+}
+
+@keyframes floatAlbum{
+
+50%{
+
+transform:
+
+translateY(-10px)
+rotate(-2deg);
+
+}
+
+}
+
+/* countdown */
+
+#countdown{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+margin-top:10px;
+
+}
+
+#countdown div{
+
+width:95px;
+
+height:95px;
+
+border-radius:50%;
+
+background:
+
+rgba(255,255,255,.08);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+backdrop-filter:blur(15px);
+
+box-shadow:
+
+0 0 20px rgba(255,80,180,.3);
+
+transition:.4s;
+
+}
+
+#countdown div:hover{
+
+transform:translateY(-8px);
+
+}
+
+#countdown span{
+
+font-size:34px;
+
+font-weight:bold;
+
+}
+
+#countdown small{
+
+opacity:.8;
+
+}
+
+/* button */
+
+button{
+
+margin-top:35px;
+
+padding:18px 45px;
+
+border:none;
+
+border-radius:50px;
+
+background:
+
+linear-gradient(
+45deg,
+#ff5db1,
+#b14cff);
+
+font-size:17px;
+
+font-weight:bold;
+
+color:white;
+
+cursor:pointer;
+
+transition:.4s;
+
+box-shadow:
+
+0 0 30px rgba(255,80,180,.5);
+
+}
+
+button:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+
+0 0 60px rgba(255,80,180,.8);
+
+}
+
+/* tracks */
+
+.tracks{
+
+margin-top:35px;
+
+text-align:left;
+
+}
+
+.tracks h3{
+
+text-align:center;
+
+margin-bottom:20px;
+
+font-size:22px;
+
+color:#ffd6ef;
+
+}
+
+.tracks ul{
+
+list-style:none;
+
+}
+
+.tracks li{
+
+padding:12px;
+
+margin-bottom:10px;
+
+border-radius:15px;
+
+background:
+
+rgba(255,255,255,.05);
+
+transition:.3s;
+
+}
+
+.tracks li:hover{
+
+padding-left:20px;
+
+background:
+
+rgba(255,255,255,.12);
+
+}
+
+/* hidden release */
+
+#release{
+
+display:none;
+
+margin-top:35px;
+
+animation:fade 1.2s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+transform:none;
+
+}
+
+}
+
+.links{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:15px;
+
+margin-top:25px;
+
+}
+
+.links a{
+
+padding:12px 22px;
+
+border-radius:40px;
+
+background:white;
+
+text-decoration:none;
+
+color:#b14cff;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.links a:hover{
+
+transform:translateY(-5px);
+
+}
+
+/* mobile */
+
+@media(max-width:700px){
+
+.title{
+
+font-size:62px;
+
+}
+
+.cover{
+
+width:220px;
+
+}
+
+#countdown div{
+
+width:80px;
+height:80px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="cursor"></div>
+
+<div class="hearts">
+
+<span>❤</span>
+<span>❤</span>
+<span>❤</span>
+<span>❤</span>
+<span>❤</span>
+<span>❤</span>
+
+</div>
+
+<div class="hero">
+
+<div class="card">
+
+<div class="artist">
+DJ CHEEZY JNR × ROYALTY SA
+</div>
+
+<h1 class="title">
+Mi Amor
+</h1>
+
+<p class="quote">
+"Every second brings us closer to Mi Amor."
+</p>
+
+<div class="genre">
+AMAPIANO • DEEP HOUSE • 3 STEP
+</div>
+
+<img src="Mi_Amor_Cover.jpg" class="cover" id="cover">
+
+<div id="countdown">
+
+<div>
+
+<span id="days">00</span>
+
+<small>Days</small>
+
+</div>
+
+<div>
+
+<span id="hours">00</span>
+
+<small>Hours</small>
+
+</div>
+
+<div>
+
+<span id="minutes">00</span>
+
+<small>Minutes</small>
+
+</div>
+
+<div>
+
+<span id="seconds">00</span>
+
+<small>Seconds</small>
+
+</div>
+
+</div>
+
+<button id="enter">
+♫ Enter Experience
+</button>
+
+<audio id="player" loop>
+
+<source src="Tu Calor Preview.mp3">
+
+</audio>
+
+<div class="tracks">
+
+<h3>Tracklist</h3>
+
+<ul>
+
+<li>❤ Tu Calor</li>
+
+<li>❤ Rato Laka (feat. Tedy.Ofc & Sneighmahn)</li>
+
+<li>❤ Ngifelani</li>
+
+<li>❤ Time Will Heal</li>
+
+</ul>
+
+</div>
+
+<div id="release">
+
+<h2>NOW STREAMING ❤️</h2>
+
+<div class="links">
+
+<a href="#">Spotify</a>
+
+<a href="#">Apple Music</a>
+
+<a href="#">Boomplay</a>
+
+<a href="#">YouTube Music</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+// ===============================
+// MI AMOR EXPERIENCE
+// PART 2A
+// ===============================
+
+// Release Date
+const releaseDate = new Date("July 24, 2026 00:00:00").getTime();
+
+const days=document.getElementById("days");
+const hours=document.getElementById("hours");
+const minutes=document.getElementById("minutes");
+const seconds=document.getElementById("seconds");
+
+const release=document.getElementById("release");
+
+const countdown=document.getElementById("countdown");
+
+const enter=document.getElementById("enter");
+
+const player=document.getElementById("player");
+
+const cover=document.getElementById("cover");
+
+const cursor=document.querySelector(".cursor");
+
+// Romantic Quotes
+
+const quotes=[
+
+"Every heartbeat whispers Mi Amor ❤️",
+
+"Love sounds better with you.",
+
+"Some songs become memories.",
+
+"The wait makes the melody sweeter.",
+
+"Every second brings us closer.",
+
+"One love. One rhythm. One Mi Amor.",
+
+"Music written from the heart."
+
+];
+
+const quote=document.querySelector(".quote");
+
+let quoteIndex=0;
+
+setInterval(()=>{
+
+quote.style.opacity=0;
+
+setTimeout(()=>{
+
+quoteIndex++;
+
+if(quoteIndex>=quotes.length){
+
+quoteIndex=0;
+
+}
+
+quote.innerText=quotes[quoteIndex];
+
+quote.style.opacity=1;
+
+},500);
+
+},5000);
+
+// Mouse Glow
+
+document.addEventListener("mousemove",e=>{
+
+cursor.style.left=e.clientX+"px";
+
+cursor.style.top=e.clientY+"px";
+
+});
+
+// Album Cover Tilt
+
+document.addEventListener("mousemove",(e)=>{
+
+let x=(window.innerWidth/2-e.clientX)/35;
+
+let y=(window.innerHeight/2-e.clientY)/35;
+
+cover.style.transform=
+
+`rotateY(${x}deg)
+ rotateX(${-y}deg)
+ translateY(-8px)`;
+
+});
+
+document.addEventListener("mouseleave",()=>{
+
+cover.style.transform="";
+
+});
+
+// Music Button
+
+let playing=false;
+
+enter.addEventListener("click",()=>{
+
+if(!playing){
+
+player.play();
+
+playing=true;
+
+enter.innerHTML="❚❚ Pause Preview";
+
+enter.style.transform="scale(.95)";
+
+setTimeout(()=>{
+
+enter.style.transform="scale(1)";
+
+},120);
+
+}else{
+
+player.pause();
+
+playing=false;
+
+enter.innerHTML="♫ Enter Experience";
+
+enter.style.transform="scale(.95)";
+
+setTimeout(()=>{
+
+enter.style.transform="scale(1)";
+
+},120);
+
+}
+
+});
+
+// Countdown
+
+function updateCountdown(){
+
+const now=new Date().getTime();
+
+const distance=releaseDate-now;
+
+if(distance<=0){
+
+finishRelease();
+
+return;
+
+}
+
+const d=Math.floor(distance/(1000*60*60*24));
+
+const h=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+const m=Math.floor((distance%(1000*60*60))/(1000*60));
+
+const s=Math.floor((distance%(1000*60))/1000);
+
+days.innerHTML=String(d).padStart(2,"0");
+
+hours.innerHTML=String(h).padStart(2,"0");
+
+minutes.innerHTML=String(m).padStart(2,"0");
+
+seconds.innerHTML=String(s).padStart(2,"0");
+
+}
+
+updateCountdown();
+
+const timer=setInterval(updateCountdown,1000);
+// ===============================
+// PART 2B - PREMIUM EFFECTS
+// ===============================
+
+// Create floating sparkles
+function createSparkle(){
+
+    const sparkle=document.createElement("div");
+
+    sparkle.innerHTML="✨";
+
+    sparkle.style.position="fixed";
+    sparkle.style.left=Math.random()*window.innerWidth+"px";
+    sparkle.style.top=window.innerHeight+20+"px";
+    sparkle.style.fontSize=(10+Math.random()*18)+"px";
+    sparkle.style.pointerEvents="none";
+    sparkle.style.opacity=Math.random();
+    sparkle.style.zIndex="1";
+    sparkle.style.transition="transform 8s linear, opacity 8s linear";
+
+    document.body.appendChild(sparkle);
+
+    requestAnimationFrame(()=>{
+
+        sparkle.style.transform=
+        `translateY(-${window.innerHeight+300}px)
+         rotate(${720*Math.random()}deg)`;
+
+        sparkle.style.opacity=0;
+
+    });
+
+    setTimeout(()=>{
+
+        sparkle.remove();
+
+    },8000);
+
+}
+
+setInterval(createSparkle,500);
+
+// ===================================
+// HEART BURST
+// ===================================
+
+function heartExplosion(){
+
+    for(let i=0;i<60;i++){
+
+        const heart=document.createElement("div");
+
+        heart.innerHTML="❤";
+
+        heart.style.position="fixed";
+        heart.style.left="50%";
+        heart.style.top="50%";
+        heart.style.fontSize=(12+Math.random()*35)+"px";
+        heart.style.color=`hsl(${320+Math.random()*40},100%,70%)`;
+        heart.style.pointerEvents="none";
+        heart.style.zIndex="9999";
+
+        document.body.appendChild(heart);
+
+        const angle=Math.random()*Math.PI*2;
+        const distance=200+Math.random()*400;
+
+        const x=Math.cos(angle)*distance;
+        const y=Math.sin(angle)*distance;
+
+        heart.animate([
+
+        {
+
+            transform:"translate(-50%,-50%) scale(.2)",
+            opacity:1
+
+        },
+
+        {
+
+            transform:`translate(${x}px,${y}px) scale(2)`,
+            opacity:0
+
+        }
+
+        ],{
+
+            duration:3000,
+            easing:"ease-out"
+
+        });
+
+        setTimeout(()=>{
+
+            heart.remove();
+
+        },3000);
+
+    }
+
+}
+
+// ===================================
+// COVER GLOW
+// ===================================
+
+setInterval(()=>{
+
+    cover.animate([
+
+    {
+
+        boxShadow:"0 0 25px #ff5db1"
+
+    },
+
+    {
+
+        boxShadow:"0 0 80px #ff9bd3"
+
+    },
+
+    {
+
+        boxShadow:"0 0 25px #ff5db1"
+
+    }
+
+    ],{
+
+        duration:3000
+
+    });
+
+},3000);
+
+// ===================================
+// SECRET EASTER EGG
+// ===================================
+
+let clicks=0;
+
+cover.addEventListener("click",()=>{
+
+    clicks++;
+
+    if(clicks===7){
+
+        alert(
+`❤️
+
+For the one who inspired every melody...
+
+Thank you for believing.
+
+MI AMOR
+
+- DJ Cheezy Jnr`
+
+        );
+
+        clicks=0;
+
+    }
+
+});
+
+// ===================================
+// RELEASE ANIMATION
+// ===================================
+
+function releaseShow(){
+
+    document.body.animate([
+
+    {
+
+        filter:"brightness(1)"
+
+    },
+
+    {
+
+        filter:"brightness(3)"
+
+    },
+
+    {
+
+        filter:"brightness(1)"
+
+    }
+
+    ],{
+
+        duration:2500
+
+    });
+
+    heartExplosion();
+
+    release.style.display="block";
+
+}
+
+// ===================================
+// CINEMATIC RELEASE
+// ===================================
+
+let released = false;
+
+function finishRelease(){
+
+    if(released) return;
+
+    released = true;
+
+    clearInterval(timer);
+
+    countdown.style.display = "none";
+    enter.style.display = "none";
+
+    player.pause();
+
+    // Flash
+    document.body.animate([
+
+        {filter:"brightness(1)"},
+        {filter:"brightness(2.5)"},
+        {filter:"brightness(1)"}
+
+    ],{
+
+        duration:1800
+
+    });
+
+  heartExplosion();
+
+confetti();
+
+cover.animate([
+
+{
+
+transform:"scale(1)"
+
+},
+
+{
+
+transform:"scale(1.25)"
+
+},
+
+{
+
+transform:"scale(1)"
+
+}
+
+],{
+
+duration:2500,
+easing:"ease-out"
+
+});
+
+release.style.display="block";
+
+showReleaseOverlay();
+
+document.querySelector("#release h2").innerHTML=
+
+"💜 MI AMOR IS OUT NOW 💜";
+}
+// ==========================================
+// CINEMATIC INTRO
+// ==========================================
+
+const intro=document.createElement("div");
+
+intro.id="introScreen";
+
+intro.style.position="fixed";
+intro.style.left="0";
+intro.style.top="0";
+intro.style.width="100%";
+intro.style.height="100%";
+intro.style.background="radial-gradient(circle,#2d0038,#090009)";
+intro.style.display="flex";
+intro.style.flexDirection="column";
+intro.style.justifyContent="center";
+intro.style.alignItems="center";
+intro.style.zIndex="999999";
+intro.style.transition="2s";
+
+intro.innerHTML=`
+
+<h1 style="
+font-family:'Great Vibes',cursive;
+font-size:90px;
+color:white;
+text-shadow:0 0 35px hotpink;
+margin:0;
+">
+
+Mi Amor
+
+</h1>
+
+<p style="
+margin-top:20px;
+font-size:22px;
+color:#ffd8ef;
+">
+
+Every love story begins with one heartbeat...
+
+</p>
+
+`;
+
+document.body.appendChild(intro);
+
+setTimeout(()=>{
+
+intro.style.opacity="0";
+
+setTimeout(()=>{
+
+intro.remove();
+
+},2000);
+
+},3000);
+
+// ==========================================
+// STAR FIELD
+// ==========================================
+
+for(let i=0;i<180;i++){
+
+const star=document.createElement("div");
+
+star.style.position="fixed";
+star.style.width="2px";
+star.style.height="2px";
+star.style.background="white";
+star.style.borderRadius="50%";
+
+star.style.left=Math.random()*100+"vw";
+star.style.top=Math.random()*100+"vh";
+
+star.style.opacity=Math.random();
+
+star.style.animation=`
+pulseStar
+${2+Math.random()*4}s
+linear infinite`;
+
+document.body.appendChild(star);
+
+}
+
+const style=document.createElement("style");
+
+style.innerHTML=`
+
+@keyframes pulseStar{
+
+50%{
+
+opacity:.1;
+transform:scale(.3);
+
+}
+
+}
+
+`;
+
+document.head.appendChild(style);
+
+// ==========================================
+// BEATING COVER
+// ==========================================
+
+setInterval(()=>{
+
+cover.animate([
+
+{
+
+transform:"scale(1)"
+
+},
+
+{
+
+transform:"scale(1.04)"
+
+},
+
+{
+
+transform:"scale(1)"
+
+}
+
+],{
+
+duration:900
+
+});
+
+},1800);
+
+// ==========================================
+// BUTTON GLOW
+// ==========================================
+
+setInterval(()=>{
+
+enter.animate([
+
+{
+
+boxShadow:"0 0 20px hotpink"
+
+},
+
+{
+
+boxShadow:"0 0 60px violet"
+
+},
+
+{
+
+boxShadow:"0 0 20px hotpink"
+
+}
+
+],{
+
+duration:1800
+
+});
+
+},1800);
+
+// ==========================================
+// TYPEWRITER EFFECT
+// ==========================================
+
+const artist=document.querySelector(".artist");
+
+const originalArtist=artist.innerText;
+
+artist.innerText="";
+
+let index=0;
+
+const typeWriter=setInterval(()=>{
+
+artist.innerText+=originalArtist[index];
+
+index++;
+
+if(index>=originalArtist.length){
+
+clearInterval(typeWriter);
+
+}
+
+},70);
+
+// ==========================================
+// COVER PARALLAX
+// ==========================================
+
+window.addEventListener("mousemove",e=>{
+
+const x=(e.clientX/window.innerWidth-.5)*25;
+
+const y=(e.clientY/window.innerHeight-.5)*25;
+
+cover.style.filter=
+
+`drop-shadow(${-x}px ${-y}px 25px rgba(255,90,180,.7))`;
+
+});
+// ==========================================
+// AUDIO VISUALIZER
+// ==========================================
+
+const visualizer=document.createElement("div");
+
+visualizer.id="visualizer";
+
+visualizer.style.display="flex";
+visualizer.style.justifyContent="center";
+visualizer.style.alignItems="flex-end";
+visualizer.style.gap="5px";
+visualizer.style.marginTop="25px";
+visualizer.style.height="70px";
+
+for(let i=0;i<32;i++){
+
+    const bar=document.createElement("div");
+
+    bar.className="bar";
+
+    bar.style.width="6px";
+    bar.style.height="15px";
+    bar.style.background=
+    "linear-gradient(to top,#ff4fa3,#ffffff,#b14cff)";
+    bar.style.borderRadius="20px";
+
+    visualizer.appendChild(bar);
+
+}
+
+document.querySelector(".card").appendChild(visualizer);
+
+const bars=document.querySelectorAll(".bar");
+
+setInterval(()=>{
+
+    if(!playing){
+
+        bars.forEach(bar=>{
+
+            bar.style.height="8px";
+
+        });
+
+        return;
+
+    }
+
+    bars.forEach(bar=>{
+
+        bar.style.height=
+        (10+Math.random()*60)+"px";
+
+    });
+
+},120);
+// ==========================================
+// CONFETTI
+// ==========================================
+
+function confetti(){
+
+    for(let i=0;i<180;i++){
+
+        const piece=document.createElement("div");
+
+        piece.style.position="fixed";
+        piece.style.left=Math.random()*100+"vw";
+        piece.style.top="-20px";
+
+        piece.style.width="8px";
+        piece.style.height="16px";
+
+        piece.style.background=
+
+        `hsl(${Math.random()*360},100%,65%)`;
+
+        piece.style.pointerEvents="none";
+
+        piece.style.transform=
+        `rotate(${Math.random()*360}deg)`;
+
+        piece.style.zIndex="999999";
+
+        document.body.appendChild(piece);
+
+        const duration=3000+Math.random()*2500;
+
+        piece.animate([
+
+        {
+
+            transform:`translateY(0) rotate(0deg)`,
+
+            opacity:1
+
+        },
+
+        {
+
+            transform:
+
+            `translateY(${window.innerHeight+100}px)
+             rotate(${720+Math.random()*720}deg)`,
+
+            opacity:0
+
+        }
+
+        ],{
+
+            duration:duration,
+
+            easing:"ease-in"
+
+        });
+
+        setTimeout(()=>{
+
+            piece.remove();
+
+        },duration);
+
+    }
+
+}
+// ==========================================
+// FULLSCREEN RELEASE OVERLAY
+// ==========================================
+
+const releaseOverlay = document.createElement("div");
+
+releaseOverlay.id = "releaseOverlay";
+
+releaseOverlay.style.cssText = `
+position:fixed;
+inset:0;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:radial-gradient(circle,#2b0035,#090009);
+z-index:999999;
+opacity:0;
+visibility:hidden;
+transition:1.2s;
+`;
+
+releaseOverlay.innerHTML = `
+
+<h1 style="
+font-family:'Great Vibes',cursive;
+font-size:110px;
+color:white;
+text-shadow:0 0 40px hotpink;
+margin:0;
+">
+
+Mi Amor
+
+</h1>
+
+<h2 style="
+margin-top:20px;
+font-weight:600;
+letter-spacing:5px;
+">
+
+NOW AVAILABLE
+
+</h2>
+
+<p style="
+margin-top:20px;
+opacity:.8;
+font-size:18px;
+">
+
+Thank you for waiting ❤️
+
+</p>
+
+`;
+
+document.body.appendChild(releaseOverlay);
+
+function showReleaseOverlay(){
+
+    releaseOverlay.style.visibility="visible";
+
+    releaseOverlay.style.opacity="1";
+
+    setTimeout(()=>{
+
+        releaseOverlay.style.opacity="0";
+
+        setTimeout(()=>{
+
+            releaseOverlay.style.visibility="hidden";
+
+        },1200);
+
+    },5000);
+
+}
+// ==========================================
+// STREAMING BUTTONS
+// ==========================================
+
+const streamButtons=document.querySelectorAll(".links a");
+
+streamButtons.forEach((btn,index)=>{
+
+btn.style.opacity="0";
+
+btn.style.transform="translateY(40px)";
+
+setTimeout(()=>{
+
+btn.style.transition=".8s";
+
+btn.style.opacity="1";
+
+btn.style.transform="translateY(0)";
+
+},800+(index*300));
+
+});
+// ==========================================
+// FALLING LOVE PARTICLES
+// ==========================================
+
+const loveIcons=["❤","💕","💖","✨","🌸"];
+
+function fallingLove(){
+
+    const icon=document.createElement("div");
+
+    icon.innerHTML=
+    loveIcons[Math.floor(Math.random()*loveIcons.length)];
+
+    icon.style.position="fixed";
+    icon.style.left=Math.random()*100+"vw";
+    icon.style.top="-50px";
+    icon.style.fontSize=(18+Math.random()*30)+"px";
+    icon.style.pointerEvents="none";
+    icon.style.zIndex="999";
+    icon.style.opacity=.85;
+
+    document.body.appendChild(icon);
+
+    const drift=(Math.random()*300)-150;
+
+    icon.animate([
+
+    {
+        transform:"translate(0,0) rotate(0deg)",
+        opacity:1
+    },
+
+    {
+        transform:`translate(${drift}px,${window.innerHeight+120}px)
+                   rotate(${720+Math.random()*720}deg)`,
+        opacity:0
+    }
+
+    ],{
+
+        duration:7000+Math.random()*3000,
+        easing:"linear"
+
+    });
+
+    setTimeout(()=>{
+
+        icon.remove();
+
+    },10000);
+
+}
+
+setInterval(fallingLove,350);
+// ==========================================
+// HEARTBEAT BACKGROUND
+// ==========================================
+
+setInterval(()=>{
+
+document.body.animate([
+
+{
+
+transform:"scale(1)"
+
+},
+
+{
+
+transform:"scale(1.003)"
+
+},
+
+{
+
+transform:"scale(1)"
+
+}
+
+],{
+
+duration:1400
+
+});
+
+},2000);
+// ==========================================
+// LOVE POPUPS
+// ==========================================
+
+const loveMessages=[
+
+"Made With Love ❤️",
+
+"Thank You For Waiting",
+
+"DJ Cheezy Jnr × Royalty SA",
+
+"Mi Amor",
+
+"Feel Every Beat",
+
+"One Love. One Sound.",
+
+"Amapiano From The Heart"
+
+];
+
+function floatingMessage(){
+
+const msg=document.createElement("div");
+
+msg.innerText=
+
+loveMessages[Math.floor(Math.random()*loveMessages.length)];
+
+msg.style.position="fixed";
+msg.style.left="50%";
+msg.style.bottom="50px";
+msg.style.transform="translateX(-50%)";
+msg.style.padding="15px 30px";
+msg.style.background="rgba(255,255,255,.08)";
+msg.style.backdropFilter="blur(15px)";
+msg.style.borderRadius="40px";
+msg.style.color="white";
+msg.style.zIndex="99999";
+msg.style.opacity="0";
+
+document.body.appendChild(msg);
+
+msg.animate([
+
+{
+
+opacity:0,
+transform:"translate(-50%,30px)"
+
+},
+
+{
+
+opacity:1,
+transform:"translate(-50%,0)"
+
+},
+
+{
+
+opacity:0,
+transform:"translate(-50%,-30px)"
+
+}
+
+],{
+
+duration:4000
+
+});
+
+setTimeout(()=>{
+
+msg.remove();
+
+},4000);
+
+}
+
+setInterval(floatingMessage,15000);
+</script>
+</body>
+</html>
